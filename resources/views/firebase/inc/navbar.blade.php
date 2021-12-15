@@ -2,7 +2,7 @@
 
 
   <div class="container">
-    <a class="navbar-brand" href="#">Firebase</a>
+    <a class="navbar-brand" href="/">Firebase</a>
 
 
     <div class="navbar-content">
@@ -18,19 +18,6 @@
         <li class="nav-item">
           <a class="nav-link active" href="{{ url('send') }}">Send Message</a>
         </li>
-<!-- 
-        @auth
-        <li class="nav-item">
-          <a class="nav-link active" href="{{ url('logout') }}">Log Out</a>
-        </li>
-        @endauth
-
-        @guest
-        <li class="nav-item">
-          <a class="nav-link active" href="{{ url('login') }}">Log In</a>
-        </li>
-        @endguest -->
-
 
     </div>
 </nav>

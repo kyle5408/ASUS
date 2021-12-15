@@ -120,12 +120,6 @@
       });
   }
 
-  // function register() {
-  //   document.register.action = "/register"
-  //   document.register = "POST"
-  //   document.register.submit()
-  // }
-
   messaging.onMessage(function(payload) {
     const noteTitle = payload.notification.title;
     const noteOptions = {
@@ -150,9 +144,7 @@
   })
 
   window.addEventListener('load', initFirebaseMessagingRegistration())
-  // window.addEventListener('submit', () => {
-  //   document.querySelector('#device_token').disabled = false
-  // })
+
 </script>
 
 @endsection
