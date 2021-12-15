@@ -5,6 +5,12 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
+
+      @if(session('status'))
+      <h4 class="alert alert-warning mb-2">{{session('status')}}</h4>
+      @endif
+
+
       <div class="card">
         <div class="card-header">
           <h4>Contact List

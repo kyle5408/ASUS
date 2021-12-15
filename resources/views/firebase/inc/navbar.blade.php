@@ -12,7 +12,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="{{ url('contact') }}">Contact</a>
+          <a class="nav-link active" href="{{ url('contacts') }}">Contact</a>
         </li>
 
         <li class="nav-item">
