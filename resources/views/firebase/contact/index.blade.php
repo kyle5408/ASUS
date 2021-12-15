@@ -30,7 +30,9 @@
               </tr>
             </thead>
             <tbody>
+              @if (is_array($contacts) || is_object($contacts))
               @forelse ($contacts as $key => $item)
+
               <tr>
                 <td>{{$key}}</td>
                 <td>{{$item['fname']}}</td>
@@ -41,9 +43,19 @@
 
               @empty
               <tr>
-                <td colspan="7">No Record Found</td>
+                <td colspan="5">No Record Found</td>
               </tr>
+
+
               @endforelse
+              @else
+              <tr>
+                <td colspan="5" style="text-align:center">No Record Found</td>
+              </tr>
+
+              @endif
+
+
             </tbody>
           </table>
 

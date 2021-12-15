@@ -12,12 +12,25 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" href="{{ url('register') }}">Register</a>
+          <a class="nav-link active" href="{{ url('register') }}">Register Device</a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link active" href="{{ url('send') }}">Send Message</a>
         </li>
+<!-- 
+        @auth
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ url('logout') }}">Log Out</a>
+        </li>
+        @endauth
+
+        @guest
+        <li class="nav-item">
+          <a class="nav-link active" href="{{ url('login') }}">Log In</a>
+        </li>
+        @endguest -->
+
 
     </div>
 </nav>
