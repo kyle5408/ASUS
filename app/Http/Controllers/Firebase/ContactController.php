@@ -14,9 +14,11 @@ class ContactController extends Controller
         $this->tablename = 'contacts';
     }
 
+
     public function index()
     {
-        return view('firebase.contact.index');
+        $contacts = $this->database->getReference($this->tablename)->getValue();
+        return view('firebase.contact.index', compact('contacts'));
     }
 
     public function create()

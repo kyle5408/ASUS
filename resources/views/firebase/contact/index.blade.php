@@ -18,7 +18,35 @@
           </h4>
         </div>
         <div class="card-body">
-          contact data
+
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              @forelse ($contacts as $key => $item)
+              <tr>
+                <td>{{$key}}</td>
+                <td>{{$item['fname']}}</td>
+                <td>{{$item['lname']}}</td>
+                <td>{{$item['email']}}</td>
+                <td>{{$item['phone']}}</td>
+              </tr>
+
+              @empty
+              <tr>
+                <td colspan="7">No Record Found</td>
+              </tr>
+              @endforelse
+            </tbody>
+          </table>
+
         </div>
       </div>
     </div>
