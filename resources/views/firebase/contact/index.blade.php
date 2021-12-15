@@ -14,7 +14,7 @@
       <div class="card">
         <div class="card-header">
           <h4>Contact List
-            <a href="{{ url('add-contact') }}" class="btn btn-sm btn-primary float-end">Add Contact</a>
+            <!-- <a href="{{ url('add-contact') }}" class="btn btn-sm btn-primary float-end">Add Contact</a> -->
           </h4>
         </div>
         <div class="card-body">

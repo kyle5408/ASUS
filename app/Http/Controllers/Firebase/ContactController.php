@@ -41,4 +41,29 @@ class ContactController extends Controller
             return redirect('contacts')->with('status', 'Contact Added Failed');
         }
     }
+
+    public function register()
+    {
+        return view('firebase.contact.register');
+    }
+
+    public function storeMember(Request $request)
+    {
+        if ($request->password != $request->confirm_password) {
+            return redirect('register')->with('status', 'Register Failed! Password and confirmPassword is different.');
+        }
+        $postData = [
+            'fname' => $request->first_name,
+            'lname' => $request->last_name,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+        $postRef = $this->database->getReference($this->tablename)->push($postData);
+        if ($postRef) {
+            return redirect('contacts')->with('status', 'Register Successfully');
+        } else {
+            return redirect('contacts')->with('status', 'Register Failed');
+        }
+    }
 }
